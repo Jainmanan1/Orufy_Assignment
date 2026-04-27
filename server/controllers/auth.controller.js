@@ -27,6 +27,7 @@ const requestOtp = async(req,res)=>{
 
       return res.status(200).json({ message: "OTP sent successfully", otp });
     } catch (error) {
+      console.error("requestOtp error:", error);
         return res.status(500).json({message:"Internal server error,Please try again "});
     }
 }
